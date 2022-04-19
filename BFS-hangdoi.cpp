@@ -21,7 +21,7 @@ class graph{
                 qe.pop();
                 cout<<s<<" ";
                 for(int i=1;i<=n;i++){
-                    if(a[s][i]==1 && check[i]==0) {
+                    if(a[s][i]!=0 && check[i]==0) {
                         qe.push(i);
                         check[i]=1;
                     }
@@ -33,5 +33,5 @@ class graph{
 int main(){
     graph g;
     g.read();
-    g.bfs(6);
+    g.bfs(3);
 }
