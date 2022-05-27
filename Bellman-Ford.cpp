@@ -40,7 +40,12 @@ class graph{
         
         void in(int s){
             for(int i=1;i<=n;i++){
-                cout<<"K/c "<<s<<" -> "<<i<<" = "<<d[i]<<";      ";
+                cout<<"K/c "<<s<<" -> "<<i<<" = ";
+                if(d[i]>9000) {
+                    cout<<"INF;\n";
+                    continue;
+                }              
+                cout<<d[i]<<";      ";
                 cout<<i<<" <- ";
                 int u=truoc[i];
                 while(u!=s){
